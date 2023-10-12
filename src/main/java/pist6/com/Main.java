@@ -29,8 +29,13 @@ public class Main {
         // WebElement inputEmail = driver.findElement(By.name("email"));
         WebElement inputEmail = driver.findElement(By.cssSelector("input[class='btn btn-input-white fs-14 w-100 login__form-input']"));
         inputEmail.sendKeys("sakura2310+40@gmail.com");
+
         WebElement inputPassword = driver.findElement(By.cssSelector("[placeholder='パスワードを入力してください']"));
         inputPassword.sendKeys("neo12345");
+
+
+
+
 
 
 //        WebElement loginButton = driver.findElement(By.cssSelector("[type='submit']"));
