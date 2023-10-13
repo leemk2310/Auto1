@@ -24,14 +24,34 @@ public class Main {
         driver.get("https:pist6-dev-basicauth:qdc6FGTV9jSk@dev.pist6-bet.bla-one.net");
         driver.manage().window().maximize();
         WebElement loginIcon = driver.findElement(By.xpath("//div[@class='container-fluid flex-between header-pc']//div[2]"));
-       Thread.sleep(2000);
         loginIcon.click();
+        Thread.sleep(2000);
+        WebElement loginPage = driver.findElement(By.xpath("//div[@class='font-weight-bold fs-20 fs-md-30 mb-10 position-relative']"));
+        boolean isDisplayLoginPage = loginPage.isDisplayed();
+        if (isDisplayLoginPage== true)
+        {
+            System.out.println("Stay on login Page");
+        }
+        else {
+            System.out.println("Incorrect spec");
+        }
+        WebElement checkLoginButton = driver.findElement(By.xpath("//button[@type='submit']"));
+        boolean isEnableCheckButton =  checkLoginButton.isEnabled();
+        if (isEnableCheckButton== true){
+            System.out.println("Incorrect Spec, this is a bug");
+        }
+        else {
+            System.out.println("Login button inactive, Accept login");
+
+        }
+
         // WebElement inputEmail = driver.findElement(By.name("email"));
         WebElement inputEmail = driver.findElement(By.cssSelector("input[class='btn btn-input-white fs-14 w-100 login__form-input']"));
         inputEmail.sendKeys("sakura2310+40@gmail.com");
 
         WebElement inputPassword = driver.findElement(By.cssSelector("[placeholder='パスワードを入力してください']"));
         inputPassword.sendKeys("neo12345");
+        Thread.sleep(3000);
 
 
 
@@ -56,6 +76,10 @@ public class Main {
 //            WebElement voteButtonMP = driver.findElement(By.cssSelector("div[class= 'btn btn-primary-red rounded-20 w-95 w-md-100 cl-4a font-normal py--12 py-md--10']"));
 //                voteButtonMP.click();
 //        Thread.sleep(2000);
+
+
+
+
         WebElement passwordCheckBox = driver.findElement(By.xpath("//label[@for='enable_password']"));
 
         Boolean isSelectedPW = passwordCheckBox.isSelected();

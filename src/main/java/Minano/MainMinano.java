@@ -1,4 +1,4 @@
-package pist6.com;
+package Minano;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

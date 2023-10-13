@@ -3,6 +3,9 @@ package pist6.com;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.lang.model.element.Element;
+import java.util.List;
+
 public class Register_info {
     public static void main(String[] args) throws InterruptedException {
 
@@ -13,11 +16,12 @@ public class Register_info {
     WebElement emailCheck = driver.findElement(By.xpath("//input[@placeholder='mail@pist6.com']"));
     emailCheck.getCssValue("sakura2310+70@gmail.com");
     System.out.println("ĐÚng Email đã dk");
-//    WebElement passWord = driver.findElement(By.cssSelector("input[name='password']"));
-//            passWord.sendKeys("neo12345");
-//
-//    WebElement confirmPW = driver.findElement(By.xpath("//input[@placeholder='確認のため、もう一度入力してください']"));
-//    confirmPW.sendKeys("neo3456");
+        List<WebElement> titleList = driver.findElements(By.xpath("//p"));
+        for (i=0, i<titleList.size(); i++){
+            System.out.println(titleList.get(i).getText());
+        }
+
+
         WebElement radioMale = driver.findElement(By.xpath("//input[@id='sex-1']"));
       ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",radioMale);
 
