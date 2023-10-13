@@ -47,7 +47,7 @@ public class Register_flow {
         linkRegisterPage.click();
         Thread.sleep(2000);
         WebElement inputRegisterEmail = driver.findElement(By.cssSelector("input[placeholder='sample@mail.com']"));
-        inputRegisterEmail.sendKeys("sakura2310+70@gmail.com");
+        inputRegisterEmail.sendKeys("sakura2310+71@gmail.com");
         Thread.sleep(2000);
         WebElement registerButton = driver.findElement(By.xpath("//form[1]//div[2]//button[1]"));
         registerButton.click();
