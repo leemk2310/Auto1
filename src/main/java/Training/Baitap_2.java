@@ -1,13 +1,12 @@
 package Training;
 
+
 import java.util.Scanner;
 
 public class Baitap_2 {
     public static void main(String[] args) {
 
-        System.out.println("Nhập số nguyên");
-        Scanner sc = new Scanner(System.in);
-       int n = sc.nextInt();
+        int n = ScanInput.inputInt();
         System.out.println("Nhập Số n = " + "  " + n);
         switch (n){
             case 0: System.out.println("Số Không");
