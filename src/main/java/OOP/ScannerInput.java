@@ -9,5 +9,10 @@ public class ScannerInput {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
+    public static  double inputDouble(){
+        Scanner sc = new Scanner(System.in);
+        return sc.nextDouble();
+    }
+
 
 }
