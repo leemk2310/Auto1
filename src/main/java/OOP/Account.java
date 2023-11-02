@@ -1,5 +1,8 @@
 package OOP;
 
+import org.testng.annotations.Test;
+
+@Test
 public class Account {
     private long stk;
 
