@@ -2,8 +2,9 @@ package TestNG;
 
 
 import org.testng.annotations.*;
+
 public class TestNG {
-    @BeforeSuite
+
     public void beforeSuite() {
         System.out.println("Before Suite");
     }
