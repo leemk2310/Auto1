@@ -1,17 +1,18 @@
 package common;
 
+import Help.Sleep;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
-public class BaseTest {
+public class BaseTestOld {
+
     public static WebDriver driver = new ChromeDriver();
+  //  public  WebDriver driver;
 
-    //  @Parameters("browserName")
-
-    //    public void Setup(@Optional("chrome")String browserName) {
+//      @Parameters("browserName")
+//
+//        public void Setup(@Optional("chrome")String browserName) {
 //        if (browserName.equalsIgnoreCase("chrome")) {
 //            driver = new ChromeDriver();
 //        }
@@ -24,15 +25,15 @@ public class BaseTest {
 //
 //    }
     @Test
-    public void run() throws InterruptedException {
+    public void run() {
 
         driver.get("https://cms.testlery.com/user/login");
-        driver.manage().window().maximize();
-        Thread.sleep(3000 );
 
+        driver.manage().window().maximize();
+        Sleep.sleep(5);
     }
 
-    @AfterTest
+   @AfterMethod
     public void closeBrowser() {
         driver.quit();
     }

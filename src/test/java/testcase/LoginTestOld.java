@@ -2,19 +2,15 @@ package testcase;
 
 import common.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
-import java.sql.SQLOutput;
 import java.time.Duration;
 
 
-public class LoginTest extends BaseTest {
+public class LoginTestOld extends BaseTestOld {
 
 
     @Test(priority = 1,dataProvider = "data_provider_login1", dataProviderClass = testcase.LoginData.class)
@@ -47,9 +43,14 @@ public class LoginTest extends BaseTest {
         signInClick.click();
         WebElement LoginComplete = driver.findElement(By.xpath("//h1[normalize-space()='Welcome, User!']"));
         String getText = LoginComplete.getText();
-        System.out.println(getText);
-        getText = validateText;
+
 
 
     }
+
+    public void testLoginPass() {
+
+    }
+
+
 }
