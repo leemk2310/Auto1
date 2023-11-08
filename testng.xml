@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Demo TestNG Annotations" verbose="1" >
     <test name="common">
+
         <classes>
-            <class name="testcase.LoginTest"/>
+            <class name="testcase.DemoQACheckbox"/>
         </classes>
     </test>
 
