@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="Test chrome" >
-        <parameter name="browser" value="chrome"/>
+    <test verbose="2" preserve-order="true" name="D:/Auto/Auto1/testng.xml">
         <classes>
-            <class name="testcase.LoginTest"/>
+            <class name="testcase.DemoSitePage_Profile_Test"/>
         </classes>
     </test>
 </suite>
